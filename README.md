@@ -10,9 +10,12 @@ This repository is a **JavaScript Playground**, a space dedicated to both practi
 - **Dynamic Examples**: The project includes dynamic and animated examples to illustrate how different JavaScript features work.
 - **Clear Structure**: The code is organized into `html`, `css`, and `js` files, making it easy to navigate and understand.
 
-###  demonstrations
+###  🎬 Demonstrations
 
-Here you can add demonstration videos of the site.
+https://github.com/user-attachments/assets/f574fb85-ba44-4e4d-af2b-47c51fa722f8
+
+https://github.com/user-attachments/assets/f1677111-1e64-4b6f-bd25-a5d95117c735
+
 
 ### 🌐 Live Site
 
@@ -40,7 +43,10 @@ Este repositório é um **JavaScript Playground**, um espaço dedicado à experi
 
 ### 🎬 Demonstrações
 
-Aqui você pode adicionar vídeos de demonstração do site.
+https://github.com/user-attachments/assets/f574fb85-ba44-4e4d-af2b-47c51fa722f8
+
+
+https://github.com/user-attachments/assets/f1677111-1e64-4b6f-bd25-a5d95117c735
 
 ### 🌐 Site ao Vivo
 
