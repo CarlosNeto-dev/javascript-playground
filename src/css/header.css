@@ -11,7 +11,8 @@ header {
         background: var(--glass-surface);
         backdrop-filter: var(--glass-blur);
         box-shadow: var(--glass-shadow);
-        padding: .5rem clamp(1.25rem, 2vw, 2.5rem);
+        padding: 2rem clamp(1.25rem, 2vw, 2.5rem);
+        z-index: 1000;
 
         .playground-logo {
             display: flex;
@@ -32,27 +33,38 @@ header {
 
         .playground-nav {
             display: flex;
-            
-
 
             .base-navbar {
+                &.active {
+                    ul {
+                        opacity: 1;
+                        visibility: visible;
+                        top: clamp(10rem, 11.5vw, 14rem);
+                        transform: translateX(-50%) translateY(0);
+                    }
+
+                  i {
+                    transform: rotate(90deg);
+                  }
+                }
+
                 ul {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
-                    gap: clamp(1rem, 2vw, 1.5rem);
+                    gap: clamp(1rem, 2vw, 5rem);
                     padding: clamp(1.5rem, 2vw, 1.5rem);
                     border-radius: 2rem;
                     position: absolute;
                     top: clamp(4.5rem, 7vw, 8rem);
                     left: 50%;
-                    transform: translateX(-50%);
+                    transform: translateX(-50%) translateY(15px);
                     background: var(--glass-surface);
                     list-style: none;
                     opacity: 0;
                     visibility: hidden;
-                    
+                    transition: all 500ms ease-in-out;
 
                     li {
                         cursor: pointer;
@@ -62,7 +74,7 @@ header {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        
+
                         &:hover {
                             background: var(--item-hover-bg);
                         }
@@ -77,8 +89,62 @@ header {
                             font-size: clamp(1rem, 2.5vw, 1.5rem);
                         }
                     }
+                  }
+
+                i {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: clamp(1.75rem, 2vw, 4rem);
+                  transition: all 300ms ease-in-out;
+                  cursor: pointer;
+                  padding: clamp(.8rem, 1.25vw, 1.5rem) clamp(1.75rem, 1.8vw, 4rem);
+                  border-radius: 50%;
+
+                  &:hover {
+                    background: var(--item-hover-bg);
+                  }
+
+                  &:active {
+                    transform: scale(0.85);
+                  }
                 }
             }
         }
     }
-}
+ }
+
+ @media (min-width: 768px) {
+    header {
+      .header-fixed {
+        .playground-logo {
+          padding: 0 clamp(2rem, 1.5vw, 3rem);
+        }
+
+        .playground-nav {
+          .base-navbar {
+            i {
+              display: none;
+            }
+
+            ul {
+              opacity: 1;
+              visibility: visible;
+              position: static;
+              top: 0;
+              left: 0;
+              transform: translateX(0) translateY(0);
+              flex-direction: row;
+              background: none;
+
+              li {
+                a {
+                  font-size: clamp(2.25rem, 2.5vw, 4rem);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+ }

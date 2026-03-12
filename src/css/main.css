@@ -1,3 +1,96 @@
 main {
     grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: clamp(1.75rem, 1.8vw, 5rem);
+    margin-top: clamp(10rem, 21vw, 24rem);
+
+    .hero-section {
+      display: grid;
+      grid-template-areas:
+      "hero-text"
+      "hero-images"
+      "hero-btn";
+      grid-template-rows: auto auto auto;
+      grid-template-columns: 1fr;
+      padding: clamp(2rem, 2.5vw, 5rem);
+      place-items: center;
+
+      @media (min-width: 768px) {
+        grid-template-areas:
+        "hero-text hero-images"
+        "hero-btn hero-images";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: clamp(1.75rem, 1.8vw, 5rem);
+      }
+
+      .hero-text {
+        grid-area: hero-text;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1.75rem, 1.8vw, 5rem);
+
+        h2 {
+          text-align: center;
+          font-size: clamp(1.5rem, 2.5vw, 5rem);
+        }
+
+        h3 {
+          text-align: center;
+          font-size: clamp(.85rem, 1.5vw, 2.75rem);
+        }
+      }
+
+      .hero-images {
+          grid-area: hero-images;
+          display: grid;
+          grid-template-areas:
+          "hero-image1 hero-image2"
+          "hero-image3 hero-image4";
+          grid-template-rows: auto auto;
+          grid-template-columns: 1fr 1fr;
+          place-items: center;
+          gap: clamp(1.75rem, 1.8vw, 5rem);
+          background: rgba(0, 0, 0, 0.2);
+          border-radius: 2rem;
+          padding: clamp(2rem, 2.5vw, 5rem);
+
+          img {
+            max-width: clamp(8rem, 15vw, 21rem);
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 2rem;
+          }
+        }
+      .hero-btn {
+        grid-area: hero-btn;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+       a {
+         button {
+          padding: clamp(1rem, 1.8vw, 4rem) clamp(1rem, 3vw, 10rem);
+          border-radius: 2rem;
+          border: 1px white solid;
+          background: none;
+          color: white;
+          font-size: clamp(1.5rem, 2.5vw, 5rem);
+          cursor: pointer;
+          transition: all 300ms ease-in-out;
+
+          &:hover {
+            background: var(--item-hover-bg);
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+       }
+      }
+   }
 }

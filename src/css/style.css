@@ -5,12 +5,12 @@
     --body-background: #0f172a;
     --glass-surface: rgba(0, 0, 0, 0.2);
     --console-surface: rgba(0, 0, 0, 0.6);
-    
+
     /* Feedback Colors */
     --accent-success: #00ff88;
     --accent-error: #ff4444;
     --item-hover-bg: rgb(121, 142, 156);
-    
+
     /* Text Colors */
     --text-primary: #ffffff;
     --text-secondary: rgba(255, 255, 255, 0.7);
@@ -56,4 +56,13 @@ body {
     100% {
         transform: scale(1);
     }
+}
+
+.section-style {
+  background: var(--glass-surface);
+  backdrop-filter: var(--glass-blur);
+  border-radius: 2rem;
+  box-shadow: var(--glass-shadow);
+  min-height: 100vh;
+  width: clamp(25rem, 80vw, 160rem);
 }
