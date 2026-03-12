@@ -55,7 +55,7 @@ buttonTopicOne.addEventListener("click", () => {
     const listOfFeminineGender = [];
     const listOfHeight = [];
 
-    for (let c = 0; c < 3; c++) {
+    for (let c = 0; c < 15; c++) {
         let gender = window.prompt("Enter with your gender: [M/F]: ");
         let height = window.prompt("Enter with your height(in meters scale): ").replace(",", ".");
 
