@@ -1,3 +1,5 @@
+import { PeopleData } from "./js-exercises/exercise01.js";
+
 /** =============== Button active the navbar ===============  */
 
 const barsButton = document.querySelector("#bars-btn");
@@ -49,12 +51,45 @@ buttonTopicOne.addEventListener("click", () => {
   clearTimeout(setTime);
 
   try {
+    const listOfMasculineHeight = [];
+    const listOfFeminineGender = [];
+    const listOfHeight = [];
     
+    for (let c = 0; c < 3; c++) {
+        let gender = window.prompt("Enter with your gender: [M/F]: ");
+        let height = window.prompt("Enter with your height(in meters scale): ").replace(",", ".");
+
+        if (!gender || !height)
+            throw new Error("You need to enter with the input!");
+        
+        if (gender.toLocaleUpperCase() === "F") {
+            listOfFeminineGender.push(gender);
+        }
+
+        else if (gender.toLocaleUpperCase() === "M") {
+            listOfMasculineHeight.push(parseFloat(height));
+        }
+
+        else
+            throw new Error("Invalid Gender! Put M or F!");
+
+        listOfHeight.push(parseFloat(height));
+    }
+
+    const data = new PeopleData(listOfHeight, listOfFeminineGender)
+
+    spanText.style.color = "var(--accent-success)";
+    
+    spanText.innerHTML = (`==== Data Collect On Group ====<br>
+    [ ${data.getHiggerHeight()}m ] is the biggest height of the group;<br>
+    [ ${data.getLowerHeight()}m ] is the lowest height of the group;<br>
+    [ ${data.getAverageHeight(listOfMasculineHeight)}m ] is the average of masculine heights<br>
+    [ ${data.quantityGenderFeminine()} ] is the quantity of feminine gender.`);
   }
 
   catch (error) {
     spanHtmlTag.style.color = "var(--accent-error)";
+    
     spanHtmlTag.textContent = `❌ Error: ${error.message}`;
   }
 })
-
