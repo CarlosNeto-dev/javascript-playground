@@ -1,0 +1,84 @@
+header {
+    grid-area: header;
+    position: relative;
+
+    .header-fixed {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 100%;
+        background: var(--glass-surface);
+        backdrop-filter: var(--glass-blur);
+        box-shadow: var(--glass-shadow);
+        padding: .5rem clamp(1.25rem, 2vw, 2.5rem);
+
+        .playground-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(0.5rem, 1.5vw, 1rem);
+
+            h1 {
+                font-size: clamp(1.85rem, 3vw, 5rem);
+            }
+
+            img {
+                height: clamp(2rem, 4vw, 5rem);
+                border-radius: 50%;
+                animation: pulse 2.5s infinite;
+            }
+        }
+
+        .playground-nav {
+            display: flex;
+            
+
+
+            .base-navbar {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: clamp(1rem, 2vw, 1.5rem);
+                    padding: clamp(1.5rem, 2vw, 1.5rem);
+                    border-radius: 2rem;
+                    position: absolute;
+                    top: clamp(4.5rem, 7vw, 8rem);
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: var(--glass-surface);
+                    list-style: none;
+                    opacity: 0;
+                    visibility: hidden;
+                    
+
+                    li {
+                        cursor: pointer;
+                        padding: clamp(.75rem, 1.25vw, 1.05rem);
+                        border-radius: 1rem;
+                        transition: all 1000ms ease-in-out;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        &:hover {
+                            background: var(--item-hover-bg);
+                        }
+
+                        &:active {
+                            transform: scale(0.85);
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: inherit;
+                            font-size: clamp(1rem, 2.5vw, 1.5rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
