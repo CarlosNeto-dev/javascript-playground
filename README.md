@@ -9,8 +9,9 @@ This repository is a **JavaScript Playground**, a space dedicated to both practi
 - **Interactive Playground**: A dedicated section to test and run JavaScript code directly in the browser.
 - **Dynamic Examples**: The project includes dynamic and animated examples to illustrate how different JavaScript features work.
 - **Clear Structure**: The code is organized into `html`, `css`, and `js` files, making it easy to navigate and understand.
+- **📱 Responsive Design**: The site is fully responsive, ensuring a seamless experience on all devices. This is achieved using modern CSS techniques like `media queries` for layout adjustments and the `clamp()` function for fluid typography and spacing.
 
-###  🎬 Demonstrations
+### 🎬 Demonstrations
 
 https://github.com/user-attachments/assets/f574fb85-ba44-4e4d-af2b-47c51fa722f8
 
@@ -19,7 +20,7 @@ https://github.com/user-attachments/assets/f1677111-1e64-4b6f-bd25-a5d95117c735
 
 ### 🌐 Live Site
 
-Access the live version of the project here: [**https://carlosneto-dev.github.io/javascript-playground/**](https://your-website-link.com)
+Access the live version of the project here: [**https://carlosneto-dev.github.io/javascript-playground/**](https://carlosneto-dev.github.io/javascript-playground/)
 
 ### 📂 Project Structure
 
@@ -40,6 +41,7 @@ Este repositório é um **JavaScript Playground**, um espaço dedicado à experi
 - **Playground Interativo**: Uma seção dedicada para testar e executar código JavaScript diretamente no navegador.
 - **Exemplos Dinâmicos**: O projeto inclui exemplos dinâmicos e animados para ilustrar como diferentes recursos do JavaScript funcionam.
 - **Estrutura Clara**: O código é organizado em arquivos `html`, `css` e `js`, facilitando a navegação e o entendimento.
+- **📱 Design Responsivo**: O site é totalmente responsivo, garantindo uma experiência perfeita em todos os dispositivos. Isso é alcançado usando técnicas modernas de CSS, como `media queries` para ajustes de layout e a função `clamp()` para tipografia e espaçamento fluidos.
 
 ### 🎬 Demonstrações
 
@@ -50,7 +52,7 @@ https://github.com/user-attachments/assets/f1677111-1e64-4b6f-bd25-a5d95117c735
 
 ### 🌐 Site ao Vivo
 
-Acesse a versão ao vivo do projeto aqui: [**https://carlosneto-dev.github.io/javascript-playground/**](https://seu-site.com)
+Acesse a versão ao vivo do projeto aqui: [**https://carlosneto-dev.github.io/javascript-playground/**](https://carlosneto-dev.github.io/javascript-playground/)
 
 ### 📂 Estrutura do Projeto
 
