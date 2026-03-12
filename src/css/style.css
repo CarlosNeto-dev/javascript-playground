@@ -44,6 +44,16 @@ body {
     font-weight: 200;
 }
 
+.section-style {
+  background: var(--glass-surface);
+  backdrop-filter: var(--glass-blur);
+  border-radius: 2rem;
+  box-shadow: var(--glass-shadow);
+  min-height: 100vh;
+  width: clamp(25rem, 80vw, 160rem);
+}
+
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -56,13 +66,4 @@ body {
     100% {
         transform: scale(1);
     }
-}
-
-.section-style {
-  background: var(--glass-surface);
-  backdrop-filter: var(--glass-blur);
-  border-radius: 2rem;
-  box-shadow: var(--glass-shadow);
-  min-height: 100vh;
-  width: clamp(25rem, 80vw, 160rem);
 }
