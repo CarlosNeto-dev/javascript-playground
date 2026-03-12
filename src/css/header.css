@@ -60,7 +60,9 @@ header {
                     top: clamp(4.5rem, 7vw, 8rem);
                     left: 50%;
                     transform: translateX(-50%) translateY(15px);
-                    background: var(--glass-surface);
+                    background: rgba(0, 0, 0, 0.9);
+                    backdrop-filter: var(--glass-blur);
+                    box-shadow: var(--glass-shadow);
                     list-style: none;
                     opacity: 0;
                     visibility: hidden;
