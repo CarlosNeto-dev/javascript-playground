@@ -236,26 +236,52 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        padding: clamp(8rem, 16.5vw, 30rem);
 
-
-        img {
-          height: clamp(8rem, 15vw, 25rem);
-          width: clamp(8rem, 15vw, 25rem);
+        .topic-one {
+          display: flex;
+          gap: clamp(1.5rem, 2vw, 5rem);
+          padding: clamp(.85rem, 1.5vw, 5rem) clamp(3.2rem, 4vw, 10rem);
           border-radius: 2rem;
-          object-fit: cover;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
           cursor: pointer;
           transition: all 300ms ease-in-out;
 
           &:hover {
-            transform: scale(1.05);
+            background: var(--item-hover-bg);
           }
 
-          &:active {
+          ¨&:active {
             transform: scale(0.95);
           }
-        }
-      }
-    }
+
+          img {
+            height: clamp(8rem, 15vw, 25rem);
+            width: clamp(8rem, 15vw, 25rem);
+            border-radius: 2rem;
+            object-fit: cover;
+            transition: all 300ms ease-in-out;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+
+            &:active {
+              transform: scale(0.95);
+            }
+          }
+
+          p {
+            text-align: center;
+            font-size: clamp(.85rem, 1.5vw, 3.5rem);
+            color: var(--text-secondary);
+          }
+       }
+     }
+   }
 
     .playground-console {
       grid-area: playground-console;
@@ -273,6 +299,7 @@ main {
       span {
         text-align: center;
         font-size: clamp(1rem, 2vw, 3.5rem);
+        font-weight: 200;
       }
     }
   }

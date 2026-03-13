@@ -11,7 +11,7 @@ barsButton.addEventListener("click", () => {
 
 /** ============ Digit Effect and Console Logic ============ */
 
-const buttonTopicOne = document.querySelector(".button-topic-one");
+const buttonTopicOne = document.querySelector(".topic-one");
 const spanHtmlTag = document.querySelector("span");
 const initialText = "My code's results will appear here! Stay stuned!";
 
