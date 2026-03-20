@@ -1,4 +1,5 @@
 import { PeopleData } from "./js-exercises/exercise01.js";
+import { studentFunction } from "./js-exercises/exercise02.js"
 
 /** =============== Button active the navbar ===============  */
 
@@ -12,6 +13,7 @@ barsButton.addEventListener("click", () => {
 /** ============ Digit Effect and Console Logic ============ */
 
 const buttonTopicOne = document.querySelector(".topic-one");
+const buttonTopicTwo = document.querySelector(".topic-two");
 const spanHtmlTag = document.querySelector("span");
 const initialText = "My code's results will appear here! Stay stuned!";
 
@@ -92,4 +94,35 @@ buttonTopicOne.addEventListener("click", () => {
 
     spanHtmlTag.textContent = `❌ Error: ${error.message}`;
   }
+})
+
+buttonTopicTwo.addEventListener("click", () => {
+  clearTimeout(setTime);
+  
+  const studentData = [
+  { "nome": "Maria Joaquinha", "notas": [8,7.5,9], "curso": "Sistemas para Internet"},
+  { "nome": "João Ricardo", "notas": [8,8.5,5], "curso": "Direito"},
+  { "nome": "José Henrique", "notas": [4,10,7], "curso": "Administração"},
+  { "nome": "Pedro da Silva", "notas": [6,7.6,7.5], "curso": "Sistemas para Internet"}, 
+  { "nome": "Silvana Morais", "notas": [6,7.5,9.5], "curso": "Sistemas de Informação"}, 
+  { "nome": "Patricia Castro", "notas": [1,9,10], "curso": "Arquitetura"}, 
+  { "nome": "Joana Ribeiro", "notas": [8,9,9], "curso": "Contabilidade"}, 
+  { "nome": "Rafael Rocha", "notas": [4,4,9], "curso": "Sistemas para Internet"}, 
+  { "nome": "Gustavo Henrique", "notas": [8,7.5,5], "curso": "Sistemas para Internet"}
+  ]
+
+  const transformObject = JSON.parse(JSON.stringify(studentData));
+
+  try {
+    spanHtmlTag.style.color = "var(--accent-success)";
+    
+    spanHtmlTag.innerHTML = studentFunction(transformObject);
+  }
+
+  catch (error) {
+    spanHtmlTag.style.color = "var(--accent-error)";
+
+    spanHtmlTag.textContent = `❌ Error: ${error.message}`;
+  }
+
 })
